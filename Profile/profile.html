@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<!--  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- font family -->
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+#profileImg{
+ font-size: 122px;
+}
+</style>
+</head>
+<body>
+    <a href="../bookFirst.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+<h2 style="text-align:center">Your Profile</h2>
+
+<div class="card">
+    <i id="profileImg" class="fa fa-user" aria-hidden="true"></i>
+  <h1 id="name">John Doe</h1>
+  Your Email:
+  <p class="title" id="email">CEO & Founder, Example</p>
+  Your Phone:
+  <p class="title" id="phone">CEO & Founder, Example</p>
+
+  <p><button>Edit</button></p>
+</div>
+<script>
+ let name = document.getElementById("name");
+let email = document.getElementById("email");
+let phone = document.getElementById("phone");
+
+// Clear any existing content
+name.innerHTML = '';
+email.innerHTML = '';
+phone.innerHTML = '';
+
+// Retrieve and set the content from local storage
+name.innerHTML = localStorage.getItem("username");
+email.innerHTML = localStorage.getItem("useremail");
+phone.innerHTML = localStorage.getItem("userphone");
+
+
+ 
+</script>
+
+</body>
+</html>
